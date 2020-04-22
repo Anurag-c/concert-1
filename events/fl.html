@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Mard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./public/images/favicon1.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleE.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+  <body>
+
+    <nav class="navbar nav-down navbar-expand-lg navbar-dark fixed-top header">
+        <a class="navbar-brand" href="../delhi.html"><img src="../images/Delhi.png" alt="logo" width="100px"></a>
+        <span class="nav-link act x">DELHI</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item ">
+                    <a class="nav-link act" href="../delhi.html">CONCERTS</a>
+                </li>
+                <li class="navbar-item ">
+                    <a class="nav-link " href="../index.html">CHANGE LOCATION</a>
+                </li>
+                <li class="navbar-item ">
+                    <a class="nav-link" href="../contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="cont"></div>
+
+
+    <div class="content">
+      <div class="main">
+        <div class="movie">
+          <div class="movie-img">
+            <img src="../images/fl2.jpg" height="800" width="504">
+          </div>
+          <div class="movie-content">
+            <h1 class="x">DELHI MARD</h1>
+            <p>ROCK MUSIC | HINDI | 12+ | 6hrs</p>
+            <p class="rating x"> 7TH MAY ,06:00 PM ONWARDS </p>
+            <p class="rating x"> NEHRU PARK ,DELHI</p>
+            <hr>
+            <p class="over1"><strong>ARTISTS</strong></p>
+            <p class="over"> FARHAN AKTHAR. </p>
+
+            <div class="borderTop"></div>
+              <div class="row">
+                  <div class="col-md-4">
+                    <h4 class="over1">PASS<h4>
+                  </div>
+                  <div class="col-md-4">
+                      <h4 class="over1 x"> INR 1,500<h4>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-control ticket_selector selectNo paid" id="321349">
+                      <option value='0'>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
+                  </div>
+              </div>
+            <div class="borderBottom"></div>
+            <h5 class="over1 price" style="margin-top:20px">TOTAL : INR 0<h5>
+            <a href="#" class="btn btn-lg btn-warning button" id="hr" style="margin-top:20px">Buy Now</a>
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+      <script type="text/javascript">
+      $('.ticket_selector').change(function() {
+        document.getElementById("hr").href="ticket.html";
+        var text= $(this).find("option:selected").text();
+        var value = "TOTAL : INR " + (text*1500);
+        var amount=text*1500;
+        $('.price').text(value);
+        if(text==0){
+          alert("Sorry!! You should select atleast one seat");
+        }
+        else{
+        $(".button").on("click",function(){
+        var x = document.getElementsByClassName("x");
+        var d=[];
+        for (var i=0;i<x.length;i++){
+          d.push(x[i].innerHTML);
+        }
+        d.push(amount);
+        d.push(text);
+        console.log(d);
+        sessionStorage.setItem("d", JSON.stringify(d));
+      });
+    }
+      });
+      </script>
+  </body>

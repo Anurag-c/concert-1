@@ -1,0 +1,254 @@
+body{
+  background-color: #e1e0d5;
+  overflow-x: hidden;
+  background-image: url("images/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.team-list {
+    margin-bottom: -90px
+}
+
+@media (min-width:48em) {
+    .team-list {
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        justify-content: center
+    }
+}
+
+@media (max-width:47.99em) {
+    .team-list {
+        margin-bottom: 0
+    }
+}
+
+.team-list .team-item {
+    margin-bottom: 90px
+}
+
+@media (max-width:47.99em) {
+    .team-list .team-item {
+        margin-bottom: 30px
+    }
+}
+
+.team-item {
+    text-align: center
+}
+
+@media (min-width:48em) {
+    .team-item {
+        width: 50%;
+        padding-right: 17px;
+        padding-left: 17px
+    }
+}
+
+@media (min-width:61.25em) {
+    .team-item {
+        width: 33.333%
+    }
+}
+
+@media (min-width:68.75em) {
+    .team-item {
+        width: 25%
+    }
+}
+
+.team-item-picture {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 0;
+    width: 230px;
+    height: 230px
+}
+
+.team-item-picture img {
+    display: block;
+    width: 100%
+}
+
+.team-item-picture .dashed-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: calc(100% + 20px);
+    width: calc(100% + 20px);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.team-item-title {
+    position: relative;
+    margin-top: -6px;
+    margin-bottom: 20px;
+    font-family: Rockness;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 999;
+    color: #e85f99;
+    font-size: 3.75rem;
+    line-height: .8333333333
+}
+
+.subtitle {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-size: .625rem;
+    letter-spacing: .4em;
+    line-height: 2;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #e85f99;
+}
+
+.appear-pop .overflow {
+    height: calc(100% + 30px);
+    width: calc(100% + 30px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.appear-pop img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width:61.24em) {
+    .team-item-title {
+        font-size: 2.5rem
+    }
+}
+
+@media (min-width:61.25em) {
+    .team-item-subtitle {
+        position: relative;
+        z-index: 999
+    }
+}
+
+.dashed-ring {
+    pointer-events: none
+}
+
+.dashed-ring circle {
+    stroke: #e85f99;
+    stroke-dasharray: 2 9;
+    -webkit-animation: 100s linear infinite;
+    animation: 100s linear infinite;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation-name: rotor;
+    animation-name: rotor;
+}
+
+@media (min-width:48em) {
+    .js-in-view.is-in-view .appear-pop img {
+        -webkit-clip-path: circle(calc(50% - 15px) at 50% 50%);
+        clip-path: circle(calc(50% - 15px) at 50% 50%)
+    }
+    .js-in-view.is-in-view .appear-pop .appear-pop-text,
+    .js-in-view.is-in-view .appear-pop .dashed-ring {
+        opacity: 1
+    }
+    .js-in-view.is-in-view .appear-pop .component-link:hover~.overflow img,
+    .js-in-view.is-in-view .appear-pop a:hover img {
+        -webkit-transition: -webkit-clip-path .3s cubic-bezier(.25, .46, .45, .94);
+        transition: -webkit-clip-path .3s cubic-bezier(.25, .46, .45, .94);
+        transition: clip-path .3s cubic-bezier(.25, .46, .45, .94);
+        transition: clip-path .3s cubic-bezier(.25, .46, .45, .94), -webkit-clip-path .3s cubic-bezier(.25, .46, .45, .94);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%)
+    }
+    .js-in-view.is-in-view .appear-pop .component-link:hover~.appear-pop-text,
+    .js-in-view.is-in-view .appear-pop a:hover .appear-pop-text {
+        color: #005fdd;
+    }
+    .js-in-view.is-in-view .appear-fade {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes rotor {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes rotor {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@font-face {
+    font-family: Rockness;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Rockness-6c1242a211.woff) format("woff");
+}
+
+figure
+{
+  margin-bottom:0!important;
+}
+
+.refer {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.refer:active {
+	transform: scale(0.95);
+}
+
+.refer:focus {
+	outline: none;
+}
+
+.refer.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.refer:hover
+{
+  text-decoration: none;
+  transform: scale(1.1) !important;
+  transition: all ease 700ms !important;
+  transition: all .75s !important;
+}

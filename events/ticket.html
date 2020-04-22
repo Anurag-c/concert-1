@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./public/images/favicon1.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleE.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <nav class="navbar nav-down navbar-expand-lg navbar-dark fixed-top header">
+        <a class="navbar-brand" href="../hyderabad.html"><img src="../images/charminar.png" alt="logo" width="100px"></a>
+        <span class="nav-link act" id="demo"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item ">
+                    <a class="nav-link act" href="../hyderabad.html">CONCERTS</a>
+                </li>
+                <li class="navbar-item ">
+                    <a class="nav-link " href="../index.html">CHANGE LOCATION</a>
+                </li>
+                <li class="navbar-item ">
+                    <a class="nav-link" href="../contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cont"></div>
+
+    <div class="content">
+      <div class="main">
+        <div class="row">
+          <div class="col-md-12 movie movie-content" style="text-align:center;">
+                <h1 style="text-align:center;font-size:1.5rem;">Booking Summary</h1>
+                <center><hr/></center>
+                <h1 style="text-align:center" class="hmm" id="demo1"></h1>
+                <p class="rating" id="demo2"></p>
+                <p class="rating hmm2" id="demo3"></p>
+                <div class="borderTop"></div>
+                  <div class="">
+                          <h4 class="over1">Number of Tickets:<h4 class="over1" id="demo6"></h4></h4>
+                          <h4 class="over1">Cost of Each Ticket:<h4 class="over1" id="demo4"><h4></h4>
+                          <h4 class="over1">Total Amount Paid:<h4 class="over1" id="demo5">/-<h4></h4>
+                  </div>
+                <div class="borderBottom"></div>
+                <a onclick="window.print()" class="btn btn-lg btn-warning button" style="margin-top:10px">Print</a>
+              </div>
+          </div>
+       </div>
+    </div>
+
+
+  <script type="text/javascript">
+            d=JSON.parse(sessionStorage.getItem("d"));
+            document.getElementById('demo').innerHTML = d[0];
+            document.getElementById('demo1').innerHTML = d[1];
+            document.getElementById('demo2').innerHTML = d[2];
+            document.getElementById('demo3').innerHTML = d[3];
+            document.getElementById('demo4').innerHTML = d[4];
+            document.getElementById('demo5').innerHTML = "INR "+d[5];
+            document.getElementById('demo6').innerHTML = d[6];
+            console.log(d);
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </body>
+</html>

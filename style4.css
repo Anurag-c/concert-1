@@ -1,0 +1,143 @@
+body
+{
+  overflow-x: hidden;
+  background: #0d0625;
+  margin:0;
+  padding:0;
+}
+.navbar
+{
+  padding-left:50px !important;
+}
+.header{
+    background: rgba(13, 6, 37, .7);
+    border-top: 2px solid #f5c322;
+    z-index: 10;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    color:#e1e0d5 !important;
+    transition: all .75s !important;
+    line-height: 76px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.nav-link:hover{
+    color: #f5c322 !important;
+}
+
+.navbar-item{
+  padding-right:40px;
+}
+.act
+{
+  color: #f5c322 !important;
+}
+
+@media only screen and (max-width: 602px) {
+
+  .navlink
+  {
+    font-size: 30px;
+  }
+  button {
+  float: none !important;
+  display: table !important;
+  margin: auto !important;
+  width: 100% !important;
+  }
+  nav
+  {
+    padding-right:50px !important;
+  }
+
+  img {
+  float: none !important;
+  display: table !important;
+  margin: auto !important;
+  }
+
+  .header{
+      border-top: 5px solid #f5c322;
+  }
+
+}
+
+.image h1
+{
+    font-family: 'WaltographRegular';
+    color: #f5c322;
+    font-size:36px;
+    font-weight: 600;
+    padding-top: 30px;
+    letter-spacing: 2px;
+}
+.image p
+{
+    color:#e1e0d5;
+    font-size:20px;
+    font-weight: 600;
+    padding-top: 20px;
+    letter-spacing: 1px;
+}
+@font-face
+{
+  font-family:frozen;
+  src:url(fonts/frozen.ttf);
+}
+.last p,a
+{
+  color:#f5c322;
+  font-size:20px;
+
+  padding-top: 20px;
+  letter-spacing: 1px;
+  font-family: frozen;
+}
+
+.btn
+{
+    font-size: 1.2rem;
+}
+
+.icons
+{
+    color:#e1e0d5;
+    padding :10px;
+    font-size:30px;
+    font-family: frozen;
+}
+.last a:hover{
+  transform: scale(1.1);
+  transition: all ease 500ms;
+}
+.icons :hover
+{
+  transform: scale(1.1) !important;
+  transition: all ease 700ms !important;
+  color: #f5c322;
+}
+.navbar-brand
+{
+  transition: all .75s !important;
+}
+a:hover
+{
+  color:#f5c322;
+  text-decoration: none;
+  transform: scale(1.1) !important;
+  transition: all ease 700ms !important;
+  transition: all .75s !important;
+}
+@font-face{font-family:Rockness;font-style:normal;font-weight:400;src:url(fonts/Rockness-6c1242a211.woff) format("woff")}
+
+span{ margin-top: 20px;color:#fff;font-size:45px;display:block;text-align:center;font-family:Rockness}
+.foot svg{color:#e90606;margin:0 3px;font-size:23px;animation:pound .35s infinite alternate!important;-webkit-animation:pound .35s infinite alternate}
+@-webkit-keyframes pound{to{transform:scale(1.2)}}
+@keyframes pound{to{transform:scale(1.2)}}

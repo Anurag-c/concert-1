@@ -1,0 +1,163 @@
+body
+{
+  overflow-x: hidden;
+  background: #0d0625;
+  margin:0;
+  padding:0;
+}
+.navbar
+{
+  padding-left:50px !important;
+}
+.header{
+    background: rgba(13, 6, 37, .7);
+    border-top: 2px solid #f5c322;
+    z-index: 10;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.navbar-brand
+{
+  transition: all .75s !important;
+
+}
+a:hover
+{
+  color:#f5c322;
+  text-decoration: none;
+  transform: scale(1.1) !important;
+  transition: all ease 700ms !important;
+  transition: all .75s !important;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    color:#e1e0d5 !important;
+    transition: all .75s !important;
+    line-height: 76px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.nav-link:hover{
+    color: #f5c322 !important;
+}
+.act{
+  color: #f5c322 !important;
+}
+.navbar-item{
+  padding-right:40px;
+}
+
+.grad
+{
+  overflow-x: hidden;
+  background-image: url("images/book.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.grad ::before
+{
+  bottom: 0;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 50%,#0d0625);
+    height: 100%;
+    padding-top: 0;
+    overflow-x: hidden;
+}
+
+h1
+{
+  letter-spacing: .4rem;
+  font-size:3.5rem;
+  color: #ffc107;
+  font-family: 'frozen';
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.06;
+  clear: both;
+}
+h2
+{
+    margin-top:15px;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color:#e1e0d5;
+    font-size: 25px;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 50rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 50rem;
+  opacity:0.7;
+  align-items: center;
+}
+
+@font-face
+{
+  font-family:frozen;
+  src:url(fonts/frozen.ttf);
+}
+#myCarousel h1
+{
+  font-size: 40px;
+  font-family: 'frozen';
+  color: #f5c322;
+  margin-bottom: 15px;
+}
+
+#myCarousel p
+{
+  font-size: 20px;
+  font-family: 'frozen';
+}
+
+@media only screen and (max-width: 602px) {
+
+  .navlink
+  {
+    font-size: 30px;
+  }
+  nav
+  {
+    padding-right:50px !important;
+  }
+  .navbar button {
+  float: none !important;
+  display: table !important;
+  margin: auto !important;
+  width: 100% !important;
+  }
+  .navbar-brand img {
+  float: none !important;
+  display: table !important;
+  margin: auto !important;
+  }
+
+  .header{
+      border-top: 5px solid #f5c322;
+  }
+
+}
