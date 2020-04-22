@@ -1,136 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>concert</title>
+<html>
+<head>
+	<title>SignUp and Login</title>
+	<link rel="stylesheet" href="stylelog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <section id="Location" class="team" style="padding-top:100px;">
-        <div class="col-md-12 text-center spk" style="padding-bottom:100px;">
-            <h2 class="team-item-title">CHOOSE YOUR LOCATION</h2>
-        </div>
+<div class="container" id="container">
+<div class="form-container sign-up-container">
 
-        <div class="center">
-            <div class="team-list">
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="hyderabad.html" ><img src="images/Charminar.png" alt="Urmi"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
+<form action="">
+	<h1>Create Account</h1>
+	<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>or use your email for registration</span>
+	<input type="text" name="name" placeholder="Name">
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<a href=""></a> <button>SignUp</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="main.html">
+		<h1>Sign In</h1>
+		<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>or use your account</span>
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<a href="#">Forgot Your Password</a>
 
-                        <h2 class="team-item-title">Hyderabad</h2>
-                        <p class="team-item-subtitle subtitle">World Capital of Biryani</p>
+	<a href="index.html"><button>Sign In</button></a>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>Welcome Back!</h1>
+			<p>To keep connected with us please login with your personal info</p>
+			<button class="ghost" id="signIn">Sign In</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<h1>Hello, Friend!</h1>
+			<p>Enter your details and start journey with us</p>
+			<button class="ghost" id="signUp">Sign Up</button>
+		</div>
+	</div>
+</div>
+</div>
 
-                    </div>
-                </div>
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
 
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="Kolkata.html" ><img src="images/kolkata.png" alt="Urmi"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
-
-                        <h2 class="team-item-title">Kolkata</h2>
-                        <p class="team-item-subtitle subtitle">Cultural Capital of India</p>
-                    </div>
-                </div>
-
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="chennai.html"><img src="images/chennai.png" alt="Urmi"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
-
-                        <h2 class="team-item-title">Chennai</h2>
-                        <p class="team-item-subtitle subtitle">The Health Capital</p>
-
-                    </div>
-                </div>
-
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="bengaluru.html" ><img src="images/bengaluru.png" alt="subhash padma"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
-
-                        <h2 class="team-item-title">Bengaluru</h2>
-                        <p class="team-item-subtitle subtitle">The Garden City</p>
-
-                    </div>
-                </div>
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
 
 
-
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="delhi.html" ><img src="images/Delhi.png" alt="Urmi"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
-
-                        <h2 class="team-item-title">Delhi</h2>
-                        <p class="team-item-subtitle subtitle">City of Rallies</p>
-
-                    </div>
-                </div>
-
-                <div class="team-item js-in-view is-in-view">
-                    <div class="appear-pop">
-                        <figure class="team-item-picture">
-                            <div class="overflow">
-                                <a href="mumbai.html" ><img src="images/mumbai.png" alt="Urmi"></a>
-                            </div>
-                            <svg class="dashed-ring">
-                                <circle style="animation-duration: 89s; animation-direction: normal;" stroke-width="1" fill="transparent" r="50%" cx="50%" cy="50%"></circle>
-                            </svg>
-                        </figure>
-
-                        <h2 class="team-item-title">Mumbai</h2>
-                        <p class="team-item-subtitle subtitle">City of Dreams</p>
-                    </div>
-                </div>
-
-
-
-
-                    </div>
-                </div>
-                <div class="container text-center" style="margin-top:40px;margin-bottom:40px;"">
-                  <a href="signlog.html" class="text-center"><button class="refer"> log out</button></a>
-                </div>
-
-
-    </section>
-  </body>
+</body>
 </html>
